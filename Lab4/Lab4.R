@@ -21,8 +21,10 @@ boxplot(respuesta ~ motor,
 
 #fit the one-way ANOVA model
 model <- aov(respuesta ~ motor, data = db)
-
 summary(model)
+
+plot(model)
+
 
 # Se toman los residuales del modelo
 residuos <- residuals(model)
